@@ -85,7 +85,7 @@ export const Header = () => {
       {isOpen && (
         <div
           ref={dropdownRef}
-          className={`absolute laptop:top-4 laptop:right-12 top-0 z-40 right-0 w-full h-screen laptop:w-fit laptop:h-fit text-xl ${bgWhite ? "text-peach" : "text-white"}  bg-linear-45 from-red-700/90 to-red-400/90  laptop:bg-none flex justify-center `}
+          className={`absolute laptop:top-4 laptop:right-12 top-0 z-40 right-0 w-full h-screen laptop:w-fit laptop:h-fit text-xl ${bgWhite ? "text-peach" : "text-white"}  bg-linear-45 from-violet-950/90 to-indigo-400/90  laptop:bg-none flex justify-center `}
         >
           <ul className="flex flex-col laptop:flex-row items-center align-middle laptop:items-end gap-6 laptop:gap-10 laptop:pb-4 laptop:px-6 font-light mt-48 laptop:mt-0">
             <NavLink
