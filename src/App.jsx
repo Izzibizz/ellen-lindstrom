@@ -9,7 +9,7 @@ export const App = () => {
   return (
     <>
     <ScrollToTop />
-    <div className="bg-linear-45 from-red-700 to-red-400 max-w-screen min-h-screen flex flex-col overflow-hidden relative">
+    <div className=" bg-varm-white max-w-screen min-h-screen flex flex-col overflow-hidden relative">
       <Header />
       <main className="flex-grow">
         <MainRoutes />
@@ -19,3 +19,5 @@ export const App = () => {
     </>
   );
 };
+
+/* bg-linear-45 from-red-700 to-red-400 */

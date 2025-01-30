@@ -10,7 +10,7 @@
 
   --color-dark: rgb(160, 25, 25);
   --color-dark-blue: rgb(2, 2, 21);
-  --color-avocado-200: oklch(0.98 0.04 113.22);
+  --color-warm-white: rgb(253, 251, 250);
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
   /* ... */
