@@ -46,7 +46,7 @@ export const Header = () => {
   console.log(bgWhite)
 
   return (
-    <header className={`w-full fixed flex h-16 p-4 z-40 justify-between  items-center font-body `}>
+    <header className={`w-full fixed flex h-16 p-4 laptop:p-6 z-40 justify-between  items-center font-body `}>
       <NavLink to="/" aria-label="Link to Home">
         {showLogo && (<img
           src={logo}
@@ -63,22 +63,22 @@ export const Header = () => {
       >
         <span
           className={` ${bgWhite ? "bg-peach" : "bg-white"} hover:bg-peach block transition-all duration-300 ease-out 
-                      h-0.5 w-6 rounded-sm ${
-                        isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+                      h-0.5 w-6 laptop:h-0.7 laptop:w-7 rounded-sm ${
+                        isOpen ? "rotate-45 translate-y-1 laptop:translate-y-1.5" : "-translate-y-0.5 laptop:-translate-y-1"
                       }`}
         >
           {" "}
         </span>
         <span
           className={`${bgWhite ? "bg-peach" : "bg-white"}  hover:bg-peach block transition-all duration-300 ease-out 
-                      h-0.5 w-6 rounded-sm my-0.5 ${
+                      h-0.5 w-6 laptop:h-0.7 laptop:w-7 rounded-sm my-0.5 laptop:my-1 ${
                         isOpen ? "opacity-0" : "opacity-100"
                       }`}
         ></span>
         <span
           className={`${bgWhite ? "bg-peach" : "bg-white"}  hover:bg-peach block transition-all duration-300 ease-out 
-                      h-0.5 w-6 rounded-sm ${
-                        isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+                      h-0.5 w-6 laptop:h-0.7 laptop:w-7 rounded-sm ${
+                        isOpen ? "-rotate-45 -translate-y-1 laptop:-translate-y-1.5" : "translate-y-0.5 laptop:translate-y-1"
                       }`}
         ></span>
       </button>

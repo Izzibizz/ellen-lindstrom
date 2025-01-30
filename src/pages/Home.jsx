@@ -31,7 +31,7 @@ export const Home = () => {
     ) : (
       <>
     <img
-      src={isLaptop ? "https://res.cloudinary.com/dbf8xygxz/image/upload/v1738238224/Ellen-Lindstrom-musikalartist-oscarsrevyn-rosa-2-laptop_mxhdmt.jpg" : "https://res.cloudinary.com/dbf8xygxz/image/upload/v1738179943/Ellen-Lindstrom-musikalartist-oscarsrevyn-rosa-2-tablet_j3j5vv.jpg"}
+      src={isLaptop ? "https://res.cloudinary.com/dbf8xygxz/image/upload/v1738240325/Ellen-Lindstrom-musikalartist-oscarsrevyn-rosa-2-lila_wbjjwv.jpg" : "https://res.cloudinary.com/dbf8xygxz/image/upload/v1738240360/Ellen-Lindstrom-musikalartist-oscarsrevyn-rosa-2-lila-mobil_gisjke.jpg"}
       alt="Ellen Lindstrom musikal artist"
       className={` z-0 opacity-100 absolute w-screen max-w-full top-0 left-0 h-[90vh] max-h-full object-cover animate-zoomInOut`}
     />
