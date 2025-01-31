@@ -4,6 +4,7 @@ import { usePortfolioStore } from "../stores/usePortfolioStore"
 import { Loading } from "../components/Loading"
 import { Hero } from "../components/Hero"
 import { OmEllen } from "../components/OmEllen"
+import { CTA } from "../components/CTA"
 import { SwiperComp } from "../components/SwiperComp"
 import { IoIosArrowDropdown } from "react-icons/io";
 
@@ -39,6 +40,7 @@ export const Home = () => {
           <div ref={omEllenRef}>
             <OmEllen />
           </div>
+          <CTA />
         </>
       )}
     </section>

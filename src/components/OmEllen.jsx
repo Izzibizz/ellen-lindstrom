@@ -2,7 +2,7 @@
 
 export const OmEllen = () => {
   return (
-    <section className="w-10/12 laptop:w-8/12 mx-auto flex flex-col laptop:flex-row gap-4 py-20">
+    <section className="w-9/12 laptop:w-8/12 mx-auto flex flex-col laptop:flex-row gap-4 py-20">
     <img src="https://res.cloudinary.com/dbf8xygxz/image/upload/v1738180385/Ellen-Lindstrom-musikalartist_kmv6ge.jpg" alt="Ellen Lindström porträtt" className="w-full laptop:w-1/2 rounded-xl"/>
     <div className="flex flex-col gap-2">
     <h4 className="text-xl">Om Ellen</h4>
