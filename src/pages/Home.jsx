@@ -72,7 +72,7 @@ useEffect(() => {
   }, [setShowHeaderLogo]);
 
   return (
-    <section className="animate-longFadeIn min-h-screen mb-20 w-screen max-w-screen relative flex flex-col font-body gap-6">
+    <section className="animate-longFadeIn min-h-screen mb-20 w-screen max-w-screen relative flex flex-col font-body gap-6 laptop:gap-12">
       {loading ? (
         <Loading />
       ) : (

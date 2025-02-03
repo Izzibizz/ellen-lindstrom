@@ -117,7 +117,7 @@ export const Header = () => {
               <li>Om Ellen</li>
             </NavLink>
             <NavLink
-              to="/kontakt"
+              to="/"
               aria-label="Link to kontakt"
               onClick={toggleMenu}
               className={({ isActive }) =>
