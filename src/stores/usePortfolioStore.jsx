@@ -6,7 +6,8 @@ export const usePortfolioStore = create((set) => ({
     showHeaderLogo: false,
     loading: false,
     error: null,
-
+    showCTA: false, 
+    setShowCTA: (input) => set({ showCTA: input}),
     setBgWhite: (input) => set({ bgWhite: input }),
     setShowHeaderLogo: (input) => set({ showHeaderLogo: input }),
 }))

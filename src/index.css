@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+
+
 @theme {
   --font-free: "Bad Script", "serif";
   --font-body: "Noto Sans", "serif";
@@ -17,5 +19,19 @@
   --color-light-purple: rgb(101, 101, 180);
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
-  /* ... */
+
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-longFadeIn: fadeIn 3s ease-in both;
+  --animate-fadeIn: fadeIn 1s ease-in both;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+
+
+}
 }

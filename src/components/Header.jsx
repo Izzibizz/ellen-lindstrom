@@ -46,13 +46,13 @@ export const Header = () => {
   console.log(showHeaderLogo)
 
   return (
-    <header className={`w-full fixed flex h-16 p-4 laptop:p-6 z-40 justify-between  items-center font-body ${showHeaderLogo && !isOpen && "bg-warm-white/90"}`}>
+    <header className={`animate-fadeIn w-full fixed flex h-16 p-4 laptop:p-6 z-40 justify-between items-center font-body ${showHeaderLogo && !isOpen && "bg-warm-white/90"}`}>
       <NavLink to="/" aria-label="Link to Home">
         {showHeaderLogo && (<img
           src={logo}
           alt="ellen lindstrom logo"
           id="logo"
-          className="h-8 tablet:h-10 object-cover hover:scale-110 transform transition-transform duration-300 origin-center"
+          className="animate-fadeIn h-8 tablet:h-10 object-cover hover:scale-110 transform transition-transform duration-300 origin-center"
         />)}
       </NavLink>
       <button
