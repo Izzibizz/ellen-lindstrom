@@ -183,8 +183,8 @@ export const SwiperComp = () => {
             />
             <div className="absolute inset-0 bg-black bg-opacity-0 flex items-center justify-center opacity-0 group-hover:opacity-80 transition-opacity duration-300"
             onClick={() => handleOpenModal(img.image, img.alt, img.photographer, img.year, img.titel)}>
-              <p className="text-white font-body text-center font-light">
-                <span className="font-free text-lg font-medium">{img.titel}</span>
+              <p className="text-white font-body text-center font-extralight">
+                <span className="font-free text-xl font-medium">{img.titel}</span>
                 <br />
                 {img.year ? img.year : ""}
               </p>

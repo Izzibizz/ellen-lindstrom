@@ -1,4 +1,5 @@
-
+import { NavLink } from "react-router-dom"
+import info from "../data/omEllen.json"
 
 export const OmEllen = () => {
   return (
@@ -6,7 +7,10 @@ export const OmEllen = () => {
     <img src="https://res.cloudinary.com/dbf8xygxz/image/upload/v1738180385/Ellen-Lindstrom-musikalartist_kmv6ge.jpg" alt="Ellen Lindström porträtt" className="w-full laptop:w-1/2 rounded-xl"/>
     <div className="flex flex-col gap-2">
     <h4 className="text-xl">Om Ellen</h4>
-    <p className="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum congue diam facilisis interdum. Nullam ornare luctus suscipit. Donec dignissim consequat orci, non commodo velit vehicula sed. Quisque vitae nunc nisl. Integer semper elementum purus a scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p className="text-justify">{info[0].introtext}</p>
+    <NavLink to="/om-ellen" className="bg-red w-fit rounded-xl p-2 px-3 text-warm-white self-end">
+    Läs mer
+    </NavLink>
   </div>
   </section>
   )

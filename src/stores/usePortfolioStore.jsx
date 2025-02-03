@@ -2,11 +2,11 @@ import { create } from 'zustand';
 
 export const usePortfolioStore = create((set) => ({
 
-    showLogo: false,
     bgWhite: false,
+    showHeaderLogo: false,
     loading: false,
     error: null,
 
-    setShowLogo: (input) => set({ showLogo: input }),
     setBgWhite: (input) => set({ bgWhite: input }),
+    setShowHeaderLogo: (input) => set({ showHeaderLogo: input }),
 }))

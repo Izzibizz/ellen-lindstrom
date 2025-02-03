@@ -23,7 +23,7 @@ export const Hero = () => {
   return (
     <div className="h-[70vh] ">
           <img
-      src={isLaptop ? "https://res.cloudinary.com/dbf8xygxz/image/upload/v1738571340/ellen-lindstrom-musikalartist-2_qlgwlw.jpg" : "https://res.cloudinary.com/dbf8xygxz/image/upload/v1738571407/ellen-lindstrom-musikalartist-1_ttlxwr.jpg"}
+      src={isLaptop ? "https://res.cloudinary.com/dbf8xygxz/image/upload/v1738571340/ellen-lindstrom-musikalartist-2_qlgwlw.jpg" : "https://res.cloudinary.com/dbf8xygxz/image/upload/v1738572915/ellen-lindstrom-musikalartist-1_ihdh3j.jpg"}
       alt="Ellen Lindstrom musikal artist"
       className={` z-0  absolute w-screen max-w-full top-0 left-0 h-[80vh] max-h-screen object-cover animate-zoomInOut`}
     />

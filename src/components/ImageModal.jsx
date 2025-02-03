@@ -18,7 +18,7 @@ export const ImageModal = ({ src, onClose, alt, year, photographer, title }) => 
     }, [onClose]);
   
     return (
-      <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 cursor-pointer text-warm-white font-body">
+      <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 cursor-pointer text-warm-white font-body font-extralight">
         <div ref={modalRef} className="flex flex-col gap-4 max-w-[90vw] max-h-[80vh]">
           <img
             src={src}
@@ -26,7 +26,7 @@ export const ImageModal = ({ src, onClose, alt, year, photographer, title }) => 
             className="object-contain cursor-pointer rounded-xl max-w-[90vw] max-h-[70vh]"
             onClick={onClose}
           />
-          <p><span className="font-free text-lg flex gap-2">{title}</span> {year} {photographer? ` (fotograf: ${photographer})`: ""}  </p>
+          <p><span className="font-free text-xl flex gap-2">{title}</span> {year} {photographer? ` (fotograf: ${photographer})`: ""}  </p>
         </div>
       </div>
     )

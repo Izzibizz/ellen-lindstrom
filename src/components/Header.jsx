@@ -1,14 +1,14 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { usePortfolioStore } from "../stores/usePortfolioStore";
-import logo from "/ellen-lindstrom-logga-text-ljus.svg";
+import logo from "/ellen-lindstrom-logga-text-rod.svg";
 
 export const Header = () => {
   const dropdownRef = useRef();
   const buttonRef = useRef();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const { showLogo, bgWhite } = usePortfolioStore()
+  const { showHeaderLogo } = usePortfolioStore()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -43,16 +43,16 @@ export const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  console.log(bgWhite)
+  console.log(showHeaderLogo)
 
   return (
-    <header className={`w-full fixed flex h-16 p-4 laptop:p-6 z-40 justify-between  items-center font-body `}>
+    <header className={`w-full fixed flex h-16 p-4 laptop:p-6 z-40 justify-between  items-center font-body ${showHeaderLogo && !isOpen && "bg-warm-white/90"}`}>
       <NavLink to="/" aria-label="Link to Home">
-        {showLogo && (<img
+        {showHeaderLogo && (<img
           src={logo}
           alt="ellen lindstrom logo"
           id="logo"
-          className="h-6 tablet:h-10 object-cover hover:scale-110 transform transition-transform duration-300 origin-center"
+          className="h-8 tablet:h-10 object-cover hover:scale-110 transform transition-transform duration-300 origin-center"
         />)}
       </NavLink>
       <button
@@ -62,7 +62,7 @@ export const Header = () => {
         className="flex flex-col justify-center items-center z-50 cursor-pointer"
       >
         <span
-          className={` ${bgWhite ? "bg-peach" : "bg-red"} hover:bg-peach block transition-all duration-300 ease-out 
+          className={`bg-red hover:bg-peach block transition-all duration-300 ease-out 
                       h-0.5 w-6 laptop:h-0.7 laptop:w-7 rounded-sm ${
                         isOpen ? "rotate-45 translate-y-1 laptop:translate-y-1.5" : "-translate-y-0.5 laptop:-translate-y-1"
                       }`}
@@ -70,13 +70,13 @@ export const Header = () => {
           {" "}
         </span>
         <span
-          className={`${bgWhite ? "bg-peach" : "bg-red"}  hover:bg-peach block transition-all duration-300 ease-out 
+          className={`bg-red  hover:bg-peach block transition-all duration-300 ease-out 
                       h-0.5 w-6 laptop:h-0.7 laptop:w-7 rounded-sm my-0.5 laptop:my-1 ${
                         isOpen ? "opacity-0" : "opacity-100"
                       }`}
         ></span>
         <span
-          className={`${bgWhite ? "bg-peach" : "bg-red"}  hover:bg-peach block transition-all duration-300 ease-out 
+          className={`bg-red  hover:bg-peach block transition-all duration-300 ease-out 
                       h-0.5 w-6 laptop:h-0.7 laptop:w-7 rounded-xl ${
                         isOpen ? "-rotate-45 -translate-y-1 laptop:-translate-y-1.5" : "translate-y-0.5 laptop:translate-y-1"
                       }`}
@@ -85,7 +85,7 @@ export const Header = () => {
       {isOpen && (
         <div
           ref={dropdownRef}
-          className={`absolute laptop:top-4 laptop:right-12 top-0 z-40 right-0 w-full h-screen laptop:w-fit laptop:h-fit text-xl ${bgWhite ? "text-peach" : "text-red"}  bg-warm-white/90 laptop:bg-warm-white/0 flex justify-center `}
+          className={`absolute laptop:top-4 laptop:right-12 top-0 z-40 right-0 w-full h-screen laptop:w-fit laptop:h-fit text-xl text-red  bg-warm-white/90 laptop:bg-warm-white/0 flex justify-center `}
         >
           <ul className="flex flex-col laptop:flex-row items-center align-middle laptop:items-end gap-6 laptop:gap-10 laptop:pb-4 laptop:px-6 font-light mt-48 laptop:mt-0">
             <NavLink
@@ -96,7 +96,7 @@ export const Header = () => {
                 ` ${
                   isActive
                     ? "underline"
-                    : `hover:scale-110 ${bgWhite ? "hover:text-dark-brown" : "text-peach"} transform transition-transform duration-300 origin-center`
+                    : `hover:scale-110 text-peach transform transition-transform duration-300 origin-center`
                 }`
               }
             >
@@ -110,7 +110,7 @@ export const Header = () => {
                 ` ${
                   isActive
                     ? "underline"
-                    : `hover:scale-110 ${bgWhite ? "hover:text-dark-brown" : "text-peach"} transform transition-transform duration-300 origin-center`
+                    : `hover:scale-110 text-peach transform transition-transform duration-300 origin-center`
                 }`
               }
             >
@@ -124,7 +124,7 @@ export const Header = () => {
                 ` ${
                   isActive
                     ? "underline"
-                    : `hover:scale-110 ${bgWhite ? "hover:text-dark-brown" : "text-peach"} transform transition-transform duration-300 origin-center`
+                    : `hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center`
                 }`
               }
             >
