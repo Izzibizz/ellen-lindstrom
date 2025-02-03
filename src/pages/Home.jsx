@@ -8,7 +8,7 @@ import { Contact } from "../components/Contact";
 import { SwiperComp } from "../components/SwiperComp";
 
 export const Home = () => {
-  const { loading, setShowHeaderLogo, showCTA, setShowCTA } =
+  const { loading, setShowHeaderLogo, showCTA, setShowCTA, scrollToContact, setScrollToContact } =
     usePortfolioStore();
   const heroRef = useRef(null);
   const contactRef = useRef(null);
@@ -25,7 +25,12 @@ export const Home = () => {
       });
     }
   }; */
-
+  useEffect(() => {
+    if (scrollToContact && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+      setScrollToContact(false); // Reset the flag after scrolling
+    }
+  }, [scrollToContact, setScrollToContact]);
 
 useEffect(() => {
   const isLaptop = window.innerWidth >= 1024;
@@ -87,7 +92,7 @@ useEffect(() => {
             alt="Ellen Lindstrom"
             className=" aspect-[16/9] laptop:aspect-[16/4] object-cover"
           />
-          <div ref={contactRef}>
+          <div ref={contactRef} id="contact">
             <Contact />
           </div>
           {showCTA && <CTA />}

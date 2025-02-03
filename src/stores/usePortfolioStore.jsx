@@ -7,7 +7,10 @@ export const usePortfolioStore = create((set) => ({
     loading: false,
     error: null,
     showCTA: false, 
+    scrollToContact: false,
+    
     setShowCTA: (input) => set({ showCTA: input}),
     setBgWhite: (input) => set({ bgWhite: input }),
     setShowHeaderLogo: (input) => set({ showHeaderLogo: input }),
+    setScrollToContact: (input) => set({ scrollToContact: input})
 }))

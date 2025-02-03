@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { usePortfolioStore } from "../stores/usePortfolioStore";
 import logo from "/ellen-lindstrom-logga-text-rod.svg";
@@ -7,8 +7,9 @@ export const Header = () => {
   const dropdownRef = useRef();
   const buttonRef = useRef();
   const location = useLocation();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  const { showHeaderLogo } = usePortfolioStore()
+  const { showHeaderLogo, setScrollToContact  } = usePortfolioStore();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -16,6 +17,15 @@ export const Header = () => {
 
   const closeMenu = () => {
     setIsOpen(false);
+  };
+
+  const handleNavClick = () => {
+    if (location.pathname !== "/home") {
+      setScrollToContact(true);
+      navigate("/");
+    } else {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   // Close the menu when navigating to a new page
@@ -43,17 +53,23 @@ export const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  console.log(showHeaderLogo)
+  console.log(showHeaderLogo);
 
   return (
-    <header className={`animate-fadeIn w-full fixed flex h-16 p-4 laptop:p-6 z-40 justify-between items-center font-body ${showHeaderLogo && !isOpen && "bg-warm-white/90"}`}>
+    <header
+      className={`animate-fadeIn w-full fixed flex h-16 p-4 laptop:p-6 z-40 justify-between items-center font-body ${
+        showHeaderLogo && "bg-warm-white/90"
+      }`}
+    >
       <NavLink to="/" aria-label="Link to Home">
-        {showHeaderLogo && (<img
-          src={logo}
-          alt="ellen lindstrom logo"
-          id="logo"
-          className="animate-fadeIn h-8 tablet:h-10 object-cover hover:scale-110 transform transition-transform duration-300 origin-center"
-        />)}
+        {showHeaderLogo && (
+          <img
+            src={logo}
+            alt="ellen lindstrom logo"
+            id="logo"
+            className="animate-fadeIn h-8 tablet:h-10 object-cover hover:scale-110 transform transition-transform duration-300 origin-center"
+          />
+        )}
       </NavLink>
       <button
         ref={buttonRef}
@@ -64,7 +80,9 @@ export const Header = () => {
         <span
           className={`bg-red hover:bg-peach block transition-all duration-300 ease-out 
                       h-0.5 w-6 laptop:h-0.7 laptop:w-7 rounded-sm ${
-                        isOpen ? "rotate-45 translate-y-1 laptop:translate-y-1.5" : "-translate-y-0.5 laptop:-translate-y-1"
+                        isOpen
+                          ? "rotate-45 translate-y-1 laptop:translate-y-1.5"
+                          : "-translate-y-0.5 laptop:-translate-y-1"
                       }`}
         >
           {" "}
@@ -78,7 +96,9 @@ export const Header = () => {
         <span
           className={`bg-red  hover:bg-peach block transition-all duration-300 ease-out 
                       h-0.5 w-6 laptop:h-0.7 laptop:w-7 rounded-xl ${
-                        isOpen ? "-rotate-45 -translate-y-1 laptop:-translate-y-1.5" : "translate-y-0.5 laptop:translate-y-1"
+                        isOpen
+                          ? "-rotate-45 -translate-y-1 laptop:-translate-y-1.5"
+                          : "translate-y-0.5 laptop:translate-y-1"
                       }`}
         ></span>
       </button>
@@ -116,20 +136,10 @@ export const Header = () => {
             >
               <li>Om Ellen</li>
             </NavLink>
-            <NavLink
-              to="/"
-              aria-label="Link to kontakt"
-              onClick={toggleMenu}
-              className={({ isActive }) =>
-                ` ${
-                  isActive
-                    ? "underline"
-                    : `hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center`
-                }`
-              }
-            >
-              <li>Kontakt</li>
-            </NavLink>
+            <li
+            onClick={handleNavClick}
+              className={`hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center`}
+            >Kontakt</li>
           </ul>
         </div>
       )}
