@@ -9,7 +9,7 @@ export const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  const { showHeaderLogo, setScrollToContact  } = usePortfolioStore();
+  const { showHeaderLogo, setScrollToContact, setScrollToGalleri, setScrollToOmEllen  } = usePortfolioStore();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -19,12 +19,28 @@ export const Header = () => {
     setIsOpen(false);
   };
 
-  const handleNavClick = () => {
-    if (location.pathname !== "/home") {
-      setScrollToContact(true);
+  const handleNavClick = (section) => {
+    if (location.pathname !== "/") {
+      switch (section) {
+        case "contact":
+          setScrollToContact(true);
+          break;
+        case "omEllen":
+          setScrollToOmEllen(true);
+          break;
+        case "galleri":
+          setScrollToGalleri(true);
+          break;
+        default:
+          return;
+      }
       navigate("/");
     } else {
-      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+      // If already on home, scroll directly
+      const targetElement = document.getElementById(section);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -53,7 +69,6 @@ export const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  console.log(showHeaderLogo);
 
   return (
     <header
@@ -67,6 +82,10 @@ export const Header = () => {
             src={logo}
             alt="ellen lindstrom logo"
             id="logo"
+            onClick={() => {
+              if (window.location.pathname === "/") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}}
             className="animate-fadeIn h-8 tablet:h-10 object-cover hover:scale-110 transform transition-transform duration-300 origin-center"
           />
         )}
@@ -108,36 +127,16 @@ export const Header = () => {
           className={`absolute laptop:top-4 laptop:right-12 top-0 z-40 right-0 w-full h-screen laptop:w-fit laptop:h-fit text-xl text-red  bg-warm-white/90 laptop:bg-warm-white/0 flex justify-center `}
         >
           <ul className="flex flex-col laptop:flex-row items-center align-middle laptop:items-end gap-6 laptop:gap-10 laptop:pb-4 laptop:px-6 font-light mt-48 laptop:mt-0">
-            <NavLink
-              to="/galleri"
-              aria-label="Link to galleri"
-              onClick={toggleMenu}
-              className={({ isActive }) =>
-                ` ${
-                  isActive
-                    ? "font-semibold"
-                    : `hover:scale-110 text-red transform transition-transform duration-300 origin-center`
-                }`
-              }
-            >
-              <li>Galleri</li>
-            </NavLink>
-            <NavLink
-              to="/om-ellen"
-              aria-label="Link to about ellen"
-              onClick={toggleMenu}
-              className={({ isActive }) =>
-                ` ${
-                  isActive
-                    ? "font-semibold"
-                    : `hover:scale-110 text-red transform transition-transform duration-300 origin-center`
-                }`
-              }
-            >
-              <li>Om Ellen</li>
-            </NavLink>
+          <li
+            onClick={() => handleNavClick("galleri")}
+              className={`hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center cursor-pointer`}
+            >Galleri</li>
             <li
-            onClick={handleNavClick}
+            onClick={() => handleNavClick("omEllen")}
+              className={`hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center cursor-pointer`}
+            >Om Ellen</li>
+            <li
+            onClick={() => handleNavClick("contact")}
               className={`hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center cursor-pointer`}
             >Kontakt</li>
           </ul>

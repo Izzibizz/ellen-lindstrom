@@ -26,7 +26,7 @@ export const CV = () => {
         ))}
          </ul>
         </div>
-        <div className="flex flex-col laptop:w-full gap-10 border border-red rounded-xl p-6">
+        <div className="flex flex-col laptop:flex-row laptop:gap-20 laptop:w-full gap-10 border border-red rounded-xl p-6">
         <ul className="flex flex-col gap-4">
         <h4 className="text-red font-semibold">UTBILDNING</h4>
         {cv[0].education.map((school, index) => (
@@ -37,7 +37,7 @@ export const CV = () => {
         ))}
        
         </ul>
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col laptop:grid laptop:grid-cols-2 gap-2">
         <h4 className="text-red font-semibold">TV & FILM</h4>
         {cv[0].tv_film.map((production, index) => (
             <li key={index}>

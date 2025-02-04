@@ -4,7 +4,7 @@ import { Loading } from "../components/Loading";
 import { Hero } from "../components/Hero";
 import { OmEllen } from "../components/OmEllen";
 import { CTA } from "../components/CTA";
-import { Galleri } from "../components/VideoComp";
+import { Galleri } from "../components/Galleri";
 import { Contact } from "../components/Contact";
 import { Aktuellt } from "../components/Aktuellt";
 import { SwiperComp } from "../components/SwiperComp";
@@ -17,17 +17,31 @@ export const Home = () => {
     setShowCTA,
     scrollToContact,
     setScrollToContact,
+    scrollToOmEllen,
+    setScrollToOmEllen,
+    scrollToGalleri,
+    setScrollToGalleri,
   } = usePortfolioStore();
   const heroRef = useRef(null);
+  const omEllenRef = useRef(null);
   const galleriRef = useRef(null);
   const contactRef = useRef(null);
 
   useEffect(() => {
     if (scrollToContact && contactRef.current) {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
-      setScrollToContact(false); // Reset the flag after scrolling
+      setScrollToContact(false); 
+    } else if (scrollToOmEllen && omEllenRef.current) {
+      omEllenRef.current.scrollIntoView({ behavior: "smooth" });
+      setScrollToOmEllen(false); 
+    } else if (scrollToGalleri && galleriRef.current) {
+      galleriRef.current.scrollIntoView({ behavior: "smooth" });
+      setScrollToGalleri(false); 
     }
-  }, [scrollToContact, setScrollToContact]);
+  }, [scrollToContact, setScrollToContact,  scrollToOmEllen,
+    setScrollToOmEllen,
+    scrollToGalleri,
+    setScrollToGalleri]);
 
   useEffect(() => {
     const isLaptop = window.innerWidth >= 1024;
@@ -83,9 +97,11 @@ export const Home = () => {
             <Hero />
           </div>
           <SwiperComp />
-          <OmEllen />
+          <div className={omEllenRef} id="omEllen">
+            <OmEllen />
+          </div>
           <Aktuellt />
-          <div ref={galleriRef}>
+          <div ref={galleriRef} id="galleri">
             <Galleri />
           </div>
           <div ref={contactRef} id="contact">

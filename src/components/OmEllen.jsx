@@ -58,7 +58,7 @@ export const OmEllen = () => {
         </div>
       </div>
       {showMore && (
-        <div className="flex flex-col gap-6"> 
+        <div className="flex flex-col gap-6 animate-fadeIn"> 
           <div className="flex flex-col laptop:flex-row justify-between gap-6">
             <div className="flex flex-col gap-4 laptop:w-1/2">
             <p className="text-justify">Sedan dess har Ellen stått kvar på scenen. Ofta i stora musikaler såsom The Producers på Chinateatern och Spamalot på Oscarsteatern. Senast sågs hon i succémusikalen Mitt om natten på Nöjesteatern i Malmö. Hon har spelat fars och sommarteater med Claes Malmberg och Eva Rydberg, krogshow med Magnus Uggla och medverkat i ett flertal revyer – bland annat Oscarsrevyn med Robert Gustafsson, Sanna Nielsen med flera. Ellen spelade i Magnus och Brasses återförening Muntergökarna på Chinateatern. Hon har också synts i svensk tv, bland annat som tävlande i lekprogrammet Doobidoo, i farsen Charley’s Tant samt som dansare i flera sammanhang.</p>
@@ -73,7 +73,7 @@ export const OmEllen = () => {
           </div>
           <CV />
           <button
-            className="flex gap-2 items-center bg-gradient-to-t from-red-600/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-sm hover:scale-105 self-center tablet:self-start mt-4"
+            className="flex gap-2 items-center bg-gradient-to-t from-red-600/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-sm hover:scale-105 self-center mt-4"
             onClick={() => handleClick()}
           >
             Läs mindre <SlArrowUp />
