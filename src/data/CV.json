@@ -1,0 +1,135 @@
+[{
+    "theater": [
+      {
+        "title": "Ett resande teatersällskap",
+        "year": "2024",
+        "role": "Ensemble, US Birgitta Rydberg",
+        "location": "Sundspärlan",
+        "director": "Andreas T Olsson"
+      },
+      {
+        "title": "Djungelboken The Musical",
+        "year": "2023",
+        "role": "Gamen Hulda, US Kaa",
+        "location": "Sverigeturné",
+        "director": "Robert Dröse"
+      },
+      {
+        "title": "Mitt om natten",
+        "year": "2022",
+        "role": "Tuxen, danskapten, US Kranen",
+        "location": "Nöjesteatern – Malmö",
+        "director": "Anders Albien"
+      },
+      {
+        "title": "Glada Änkan",
+        "year": "2021",
+        "role": "Ensemble, US Njegus, danskapt",
+        "location": "Nöjesteatern – Malmö",
+        "director": "Anders Aldgård"
+      },
+      {
+        "title": "Jeppe på berget",
+        "year": "2019",
+        "role": "Koreograf, div roller",
+        "location": "Tjolöholms Slott, Kungsbacka",
+        "director": "Claes Malmberg"
+      },
+      {
+        "title": "Annie",
+        "year": "2018-2019",
+        "role": "Ensemble, US: Lily",
+        "choreography": "Sian Playsted",
+        "location": "Nöjesteatern Malmö, Lorensbergsteatern – Göteborg",
+        "director": "Eva Rydberg"
+      },
+      {
+        "title": "The Good Old Days",
+        "year": "2018",
+        "role": "Sångerska, artist",
+        "location": "Jonsereds Sommarteater",
+        "costars": ["Claes Malmberg", "Jan Malmsjö"],
+        "director": "Björn Holmgren"
+      },
+      {
+        "title": "Oscarsrevyn",
+        "year": "2016-2017",
+        "role": "Ensemble, US: Sanna Nielsen, Rachel Molin",
+        "location": "Oscarsteatern, Lorensbergsteatern",
+        "director": "Edward af Sillén"
+      },
+      {
+        "title": "Charley’s Tant",
+        "year": "2015-2016",
+        "role": "Emmy",
+        "location": "Intiman – Stockholm, Göteborg och Malmö",
+        "director": "Anders Aldgård"
+      },
+      {
+        "title": "Magnus den Store",
+        "year": "2013-2014",
+        "role": "Dansare, sångerska, div roller",
+        "location": "Hamburger Börs, Rondo – Göteborg, Turné – Sverige",
+        "director": "Christoffer Bendixen"
+      },
+      {
+        "title": "Spamalot",
+        "year": "2010",
+        "role": "Ensemble, US: Lady of the Lake",
+        "location": "Oscarsteatern – Stockholm, Nöjesteatern – Malmö",
+        "director": "Anders Albien"
+      },
+      {
+        "title": "Ugglas Revy",
+        "year": "2009",
+        "role": "Dansare, artist",
+        "location": "Karlshamn, Rondo – Göteborg",
+        "director": "Johan Wahlström",
+        "choreographer": "Roine Söderlundh"
+      },
+      {
+        "title": "The Producers",
+        "year": "2008",
+        "role": "Ensemble, US: Ulla",
+        "location": "Chinateatern – Stockholm, Lorensbergsteatern – Göteborg",
+        "director": "Anders Aldgård"
+      },
+      {
+        "title": "Wallmans Köpenhamn",
+        "year": "2007",
+        "role": "Dansare, sångerska",
+        "location": "Wallmans – Köpenhamn",
+        "director": "Johan Espeland"
+      },
+      {
+        "title": "Muntergökarna",
+        "year": "2005",
+        "role": "Skådespelerska",
+        "location": "Chinateatern – Stockholm",
+        "director": "Bjarni Haukur Thorsson"
+      }
+    ],
+    "education": [
+      {
+        "school": "Balettakademien Yrkesdansarlinjen",
+        "focus": "Musikal",
+        "location": "Stockholm",
+        "years": "2000-2003"
+      },
+      {
+        "school": "Balettakademien Förberedande",
+        "focus": "Dansinriktning",
+        "location": "Stockholm",
+        "years": "1999-2000"
+      }
+    ],
+    "tv_film": [
+      { "title": "Doobidoo", "year": "2017", "location": "SVT Göteborg" },
+      { "title": "Charley’s Tant", "year": "2016", "location": "SVT Malmö" },
+      { "title": "Min så kallade pappa", "year": "2013", "production": "Bob Film Productions AB", "location": "Trollhättan" },
+      { "title": "Lotta på Liseberg", "year": "2013", "location": "TV4 Göteborg" },
+      { "title": "Humorgalan", "year": "2012", "location": "TV4 Stockholm" },
+      { "title": "Idrottsgalan", "year": "2010", "location": "SVT Stockholm" },
+      { "title": "Allsång på Skansen", "year": "2009", "location": "SVT Stockholm" }
+    ]
+  }]
