@@ -1,9 +1,9 @@
 export const Aktuellt = () => {
   return (
-    <div className="flex flex-col  w-10/12 laptop:w-8/12 mx-auto bg-gradient-to-t from-red-600/100 to-red-400/80 p-6 laptop:p-10 gap-10 items-center laptop:items-start text-warm-white">
-      <h3 className=" text-2xl self-start">Aktuellt</h3>
-      <div className="flex flex-col laptop:flex-row gap-16 laptop:gap-18">
-        <div className="flex flex-col gap-6 laptop:w-1/2 laptop:flex-row">
+    <div className="flex flex-col  w-full laptop:w-8/12 mx-auto bg-gradient-to-t from-red-600/100 to-red-400/80 p-6 py-16 laptop:p-12 gap-10 items-center laptop:items-start text-warm-white">
+      <h3 className=" text-2xl self-start pl-4 laptop:pl-0">Aktuellt</h3>
+      <div className="flex flex-col w-11/12 mx-auto laptop:w-full laptop:flex-row gap-16 laptop:gap-18">
+        <div className="flex flex-col  gap-6 laptop:w-1/2 laptop:flex-row">
           <a href="https://rockyhorror.se/" target="_blank" className="w-full">
             <img
               src="https://res.cloudinary.com/dbf8xygxz/image/upload/v1738180388/kommande-Ellen-Lindstrom-Rocky-Horrows-Show-2025_b4k9u9.jpg"
