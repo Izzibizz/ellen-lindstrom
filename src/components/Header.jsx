@@ -36,7 +36,7 @@ export const Header = () => {
       }
       navigate("/");
     } else {
-      // If already on home, scroll directly
+      setIsOpen(false)
       const targetElement = document.getElementById(section);
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: "smooth" });

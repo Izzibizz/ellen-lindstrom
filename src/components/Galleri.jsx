@@ -1,11 +1,31 @@
 import { useState } from "react";
 import images from "../data/ImageData.json";
+import { ImageModal } from "./ImageModal";
 import { SlArrowUp } from "react-icons/sl";
 import { SlArrowDown } from "react-icons/sl";
 
 export const Galleri = () => {
   const [showAll, setShowAll] = useState(false);
   const displayedImages = showAll ? images : images.slice(0, 4);
+  const [imageSrc, setImageSrc] = useState();
+  const [imageAlt, setImageAlt] = useState();
+  const [imageTitle, setImageTitle] = useState();
+  const [imagePhotographer, setImagePhotographer] = useState();
+  const [imageYear, setImageYear] = useState();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = (src, alt, photographer, year, title) => {
+    setIsModalOpen(true);
+    setImageSrc(src);
+    setImageAlt(alt);
+    setImagePhotographer(photographer)
+    setImageYear(year)
+    setImageTitle(title)
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <section className="w-10/12 laptop:w-8/12 mx-auto py-20 flex flex-col gap-10">
@@ -40,12 +60,13 @@ export const Galleri = () => {
               src={img.image}
               alt={img.alt}
               className="aspect-[4/3] object-cover"
+              onClick={() => handleOpenModal(img.image, img.alt, img.photographer, img.year, img.titel)}
             />
           </li>
         ))}
       </ul>
       <button
-        className="flex gap-2 items-center bg-gradient-to-t from-red-600/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-sm hover:scale-105 self-center tablet:self-end mt-4"
+        className="flex gap-2 items-center bg-gradient-to-t from-red-600/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-xs laptop:text-sm hover:scale-105 self-center tablet:self-end"
         onClick={() => setShowAll(!showAll)}
       >
         {showAll ? (
@@ -58,6 +79,9 @@ export const Galleri = () => {
           </>
         )}
       </button>
+      {isModalOpen && (
+        <ImageModal src={imageSrc} alt={imageAlt} title={imageTitle} year={imageYear} photographer={imagePhotographer} onClose={handleCloseModal} />
+      )}
     </section>
   );
 };

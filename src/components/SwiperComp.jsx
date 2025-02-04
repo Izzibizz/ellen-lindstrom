@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom"
 import { Navigation, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ImageModal } from "./ImageModal";
