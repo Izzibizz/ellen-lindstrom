@@ -78,27 +78,27 @@ export const Header = () => {
         className="flex flex-col justify-center items-center z-50 cursor-pointer"
       >
         <span
-          className={`bg-red hover:bg-peach block transition-all duration-300 ease-out 
-                      h-0.5 w-6 laptop:h-0.7 laptop:w-7 rounded-sm ${
+          className={`bg-red hover:bg-rose-400 block transition-all duration-300 ease-out 
+                      h-0.5 w-6 laptop:h-0.7 laptop:w-6 rounded-sm ${
                         isOpen
-                          ? "rotate-45 translate-y-1 laptop:translate-y-1.5"
-                          : "-translate-y-0.5 laptop:-translate-y-1"
+                          ? "rotate-45 translate-y-1 laptop:translate-y-1.2"
+                          : "-translate-y-0.5 laptop:-translate-y-0.7"
                       }`}
         >
           {" "}
         </span>
         <span
-          className={`bg-red  hover:bg-peach block transition-all duration-300 ease-out 
-                      h-0.5 w-6 laptop:h-0.7 laptop:w-7 rounded-sm my-0.5 laptop:my-1 ${
+          className={`bg-red  hover:bg-rose-400 block transition-all duration-300 ease-out 
+                      h-0.5 w-6 laptop:h-0.7 laptop:w-6 rounded-sm my-0.5 laptop:my-0.7 ${
                         isOpen ? "opacity-0" : "opacity-100"
                       }`}
         ></span>
         <span
-          className={`bg-red  hover:bg-peach block transition-all duration-300 ease-out 
-                      h-0.5 w-6 laptop:h-0.7 laptop:w-7 rounded-xl ${
+          className={`bg-red  hover:bg-rose-400 block transition-all duration-300 ease-out 
+                      h-0.5 w-6 laptop:h-0.7 laptop:w-6 rounded-xl ${
                         isOpen
-                          ? "-rotate-45 -translate-y-1 laptop:-translate-y-1.5"
-                          : "translate-y-0.5 laptop:translate-y-1"
+                          ? "-rotate-45 -translate-y-1 laptop:-translate-y-1.2"
+                          : "translate-y-0.5 laptop:translate-y-0.7"
                       }`}
         ></span>
       </button>
@@ -115,8 +115,8 @@ export const Header = () => {
               className={({ isActive }) =>
                 ` ${
                   isActive
-                    ? "underline"
-                    : `hover:scale-110 text-peach transform transition-transform duration-300 origin-center`
+                    ? "font-semibold"
+                    : `hover:scale-110 text-red transform transition-transform duration-300 origin-center`
                 }`
               }
             >
@@ -129,8 +129,8 @@ export const Header = () => {
               className={({ isActive }) =>
                 ` ${
                   isActive
-                    ? "underline"
-                    : `hover:scale-110 text-peach transform transition-transform duration-300 origin-center`
+                    ? "font-semibold"
+                    : `hover:scale-110 text-red transform transition-transform duration-300 origin-center`
                 }`
               }
             >
@@ -138,7 +138,7 @@ export const Header = () => {
             </NavLink>
             <li
             onClick={handleNavClick}
-              className={`hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center`}
+              className={`hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center cursor-pointer`}
             >Kontakt</li>
           </ul>
         </div>

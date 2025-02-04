@@ -4,7 +4,9 @@ import { Loading } from "../components/Loading";
 import { Hero } from "../components/Hero";
 import { OmEllen } from "../components/OmEllen";
 import { CTA } from "../components/CTA";
+import { VideoComp } from "../components/VideoComp"
 import { Contact } from "../components/Contact";
+import { Aktuellt } from "../components/Aktuellt";
 import { SwiperComp } from "../components/SwiperComp";
 
 export const Home = () => {
@@ -87,11 +89,15 @@ useEffect(() => {
           </div>
           <SwiperComp />
           <OmEllen />
+          <Aktuellt />
           <img
-            src="https://res.cloudinary.com/dbf8xygxz/image/upload/v1738180402/Ellen-Lindstrom-Oscarsrevyn-2017-Lorensbergsteatern_tskwtj.jpg"
+            src="https://res.cloudinary.com/dbf8xygxz/image/upload/v1738654848/Ellen-Lindstrom-Oscarsrevyn-2017-Lorensbergsteatern-banner_aswqmo.jpg"
             alt="Ellen Lindstrom"
-            className=" aspect-[16/9] laptop:aspect-[16/4] object-cover"
+            className=" aspect-[16/9] laptop:aspect-[16/4] laptop:w-8/12 laptop:mx-auto object-cover"
           />
+          <VideoComp />
+          
+         
           <div ref={contactRef} id="contact">
             <Contact />
           </div>

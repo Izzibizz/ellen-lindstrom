@@ -27,7 +27,7 @@ export const Hero = () => {
       alt="Ellen Lindstrom musikal artist"
       className={` z-0  absolute w-screen max-w-full top-0 left-0 h-[80vh] max-h-screen object-cover animate-zoomInOut`}
     />
-    <div className="absolute z-30 top-[7%] left-6 tablet:left-[10%] laptop:top-[10%] laptop:left-[10%]">
+    <div className="absolute z-30 top-20 left-6 tablet:top-[2%] tablet:left-[10%]">
     <img src={logo} alt="logo Ellen Lindstrom name" className="h-[80px] tablet:h-[130px] laptop:h-[200px] "/>
     {/* <h3 className="font-free text-red text-2xl tablet:text-3xl ml-10 laptop:ml-20">Musikalartist</h3> */}
     </div>

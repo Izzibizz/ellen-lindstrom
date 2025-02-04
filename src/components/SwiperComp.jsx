@@ -33,7 +33,7 @@ export const SwiperComp = () => {
   };
 
   return (
-    <div className="flex flex-col gap-2">
+    <>
       <Swiper
         modules={[Navigation, A11y, Autoplay]}
         spaceBetween={10}
@@ -75,12 +75,9 @@ export const SwiperComp = () => {
           </SwiperSlide>
         ))}
              </Swiper>
-      <NavLink to="/galleri" className=" bg-gradient-to-t from-red-500/80 to-rose-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-sm hover:scale-105 mr-[12.5%] self-end ">
-    Till galleri
-    </NavLink>
       {isModalOpen && (
         <ImageModal src={imageSrc} alt={imageAlt} title={imageTitle} year={imageYear} photographer={imagePhotographer} onClose={handleCloseModal} />
       )}
-    </div>
+    </>
   );
 };

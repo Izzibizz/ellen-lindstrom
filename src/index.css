@@ -3,8 +3,8 @@
 
 
 @theme {
-  --font-free: "Bad Script", "serif";
-  --font-body: "Noto Sans", "serif";
+  --font-round: "Montserrat Alternates", "serif";
+  --font-body: "Figtree", "serif";
 
   --breakpoint-tablet: 600px;
   --breakpoint-laptop: 1025px;
