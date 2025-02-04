@@ -6,7 +6,7 @@ import { SlArrowDown } from "react-icons/sl";
 
 export const Galleri = () => {
   const [showAll, setShowAll] = useState(false);
-  const displayedImages = showAll ? images : images.slice(0, 4);
+  const displayedImages = showAll ? images : images.slice(0, 8);
   const [imageSrc, setImageSrc] = useState();
   const [imageAlt, setImageAlt] = useState();
   const [imageTitle, setImageTitle] = useState();
@@ -52,16 +52,20 @@ export const Galleri = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
+        
       </div>
-      <ul className="grid grid-cols-4  gap-4 laptop:gap-6">
+      <ul className="grid grid-cols-2  gap-4 tablet:grid-cols-4 laptop:gap-6 mt-10 text-stone-700 font-light text-xs">
         {displayedImages.map((img, index) => (
           <li key={index}>
             <img
               src={img.image}
               alt={img.alt}
-              className="aspect-[4/3] object-cover"
+              className="aspect-[4/3] object-cover cursor-pointer"
               onClick={() => handleOpenModal(img.image, img.alt, img.photographer, img.year, img.titel)}
             />
+            <p>{img.titel}</p>
+            {img.year && <p>({img.year})</p>}
+            {img.photographer && <p>fotograf: {img.photographer}</p>}
           </li>
         ))}
       </ul>
