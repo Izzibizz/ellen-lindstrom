@@ -46,9 +46,9 @@ export const OmEllen = () => {
           >
             Året därpå blev hon upptäckt av Bill Goodson, koreograf (bl.a. till
             Michael Jackson, Diana Ross, Moulin Rouge i Paris samt, icke att
-            förglömma, Digg-Loo Diggi-Ley med Herreys) som tog henne till
-            Italien och en gigantisk TV-produktion – lördagsunderhållning på Rai
-            Uno med öppen sluttid och världsartister som gäster.
+            förglömma, Diggi-Loo Diggi-Ley med Herreys) som tog henne till
+            Italien och en gigantisk TV-&shy;produktion – lördags&shy;underhållning på Rai
+            Uno med öppen sluttid och världs&shy;artister som gäster.
           </p>
           {!showMore && (
             <button
@@ -64,9 +64,9 @@ export const OmEllen = () => {
         <div className="flex flex-col gap-6 animate-fadeIn"> 
           <div className="flex flex-col laptop:flex-row justify-between gap-6">
             <div className="flex flex-col gap-4 laptop:w-1/2">
-            <p className="text-justify">Sedan dess har Ellen stått kvar på scenen. Ofta i stora musikaler såsom The Producers på Chinateatern och Spamalot på Oscarsteatern. Senast sågs hon i succémusikalen Mitt om natten på Nöjesteatern i Malmö. Hon har spelat fars och sommarteater med Claes Malmberg och Eva Rydberg, krogshow med Magnus Uggla och medverkat i ett flertal revyer – bland annat Oscarsrevyn med Robert Gustafsson, Sanna Nielsen med flera. Ellen spelade i Magnus och Brasses återförening Muntergökarna på Chinateatern. Hon har också synts i svensk tv, bland annat som tävlande i lekprogrammet Doobidoo, i farsen Charley’s Tant samt som dansare i flera sammanhang.</p>
-            <p className="text-justify">På senare år har Ellen också koreograferat en hel del, bl.a. Claes Malmbergs uppsättning av Jeppe på berget på Tjolöholms slotts sommarteater. Hon anlitas även som gästlärare i repertoar, auditionträning, theatre jazz m.m. på de stora utbildningarna (Balettakademien, Lunds dans och musikalgymnasium m.fl.).</p>
-            <p className="text-justify">Sommaren 2025 står Ellen återigen på Eva Rydbergs nystartade scen Sundspärlan i Helsingborg, i farsen Spanska flugan. Och hösten 2025 ser vi henne i kultmusikalen Rocky Horror Show som spelas på Nöjesteatern, Malmö.</p>
+            <p className="text-justify">Sedan dess har Ellen stått kvar på scenen. Ofta i stora musikaler såsom The Producers på Chinateatern och Spamalot på Oscars&shy;teatern. Senast sågs hon i succé&shy;musikalen Mitt om natten på Nöjesteatern i Malmö. Hon har spelat fars och sommarteater med Claes Malmberg och Eva Rydberg, krogshow med Magnus Uggla och medverkat i ett flertal revyer – bland annat Oscarsrevyn med Robert Gustafsson, Sanna Nielsen med flera. Ellen spelade i Magnus och Brasses återförening Muntergökarna på Chinateatern. Hon har också synts i svensk tv, bland annat som tävlande i lek&shy;programmet Doobidoo, i farsen Charley’s Tant samt som dansare i flera sammanhang.</p>
+            <p className="text-justify">På senare år har Ellen också koreograferat en hel del, bl.a. Claes Malmbergs uppsättning av Jeppe på berget på Tjolöholms slotts sommarteater. Hon anlitas även som gäst&shy;lärare i repertoar, audition&shy;träning, theatre jazz m.m. på de stora utbildningarna (Balettakademien, Lunds dans och musikalgymnasium m.fl.).</p>
+            <p className="text-justify">Sommaren 2025 står Ellen återigen på Eva Rydbergs nystartade scen Sundspärlan i Helsingborg, i farsen Spanska flugan. Och hösten 2025 ser vi henne i kult&shy;musikalen Rocky Horror Show som spelas på Nöjesteatern, Malmö.</p>
             </div>
             <img
               src="https://res.cloudinary.com/dbf8xygxz/image/upload/v1738657715/Ellen-Lindstrom-musikalartist_uzqc2k.jpg"
