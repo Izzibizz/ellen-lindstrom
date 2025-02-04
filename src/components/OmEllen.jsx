@@ -10,13 +10,16 @@ export const OmEllen = () => {
 
   const handleClick = () => {
     setShowMore(!showMore);
-
-    if (topRef.current) {
-      const yOffset = -100; 
-      const y = topRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
   
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
+    setTimeout(() => {
+      if (topRef.current) {
+        const headerHeight = document.querySelector("header")?.offsetHeight || 100; 
+        const yOffset = -headerHeight; 
+        const y = topRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
+  
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
   };
 
   return (
