@@ -10,11 +10,15 @@ export const usePortfolioStore = create((set) => ({
     scrollToContact: false,
     scrollToOmEllen: false,
     scrollToGalleri: false,
+    scrollToCv: false,
+    showMore: false,
     
     setShowCTA: (input) => set({ showCTA: input}),
     setBgWhite: (input) => set({ bgWhite: input }),
     setShowHeaderLogo: (input) => set({ showHeaderLogo: input }),
     setScrollToContact: (input) => set({ scrollToContact: input}),
     setScrollToOmEllen: (input) => set({ scrollToOmEllen: input}),
-    setScrollToGalleri: (input) => set({ scrollToGalleri: input })
+    setScrollToGalleri: (input) => set({ scrollToGalleri: input }),
+    setScrollToCv: (input) => set({ scrollToCv: input }),
+    setShowMore: (input) => set({ showMore: input })
 }))

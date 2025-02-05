@@ -1,12 +1,15 @@
-import { useState, useRef } from "react";
+import { useRef, useEffect } from "react";
+import { usePortfolioStore } from "../stores/usePortfolioStore";
 import { SlArrowUp } from "react-icons/sl";
 import { SlArrowDown } from "react-icons/sl";
 import { CV } from "../components/CV"
 
 export const OmEllen = () => {
-  const [showMore, setShowMore] = useState(false);
+
+  const { scrollToCv, setScrollToCv, showMore, setShowMore } = usePortfolioStore()
 
   const topRef = useRef(null)
+  const cvRef = useRef(null)
 
   const handleClick = () => {
     setShowMore(!showMore);
@@ -21,6 +24,13 @@ export const OmEllen = () => {
       }
     }, 100);
   };
+
+  useEffect(() => {
+    if (scrollToCv && cvRef.current) {
+      cvRef.current.scrollIntoView({ behavior: "smooth" });
+      setScrollToCv(false); 
+    }
+  }, [])
 
   return (
     <section className="w-10/12 laptop:w-8/12 mx-auto flex flex-col py-20 text-stone-700 gap-6 laptop:gap-16">
@@ -74,7 +84,9 @@ export const OmEllen = () => {
               className="laptop:w-1/3 object-cover  rounded-xl"
             />{" "}
           </div>
+          <div ref={cvRef} id="cv">
           <CV />
+          </div>
           <button
             className="flex gap-2 items-center bg-gradient-to-t from-red-600/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-sm hover:scale-105 self-center mt-4"
             onClick={() => handleClick()}

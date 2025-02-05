@@ -9,7 +9,14 @@ export const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  const { showHeaderLogo, setScrollToContact, setScrollToGalleri, setScrollToOmEllen  } = usePortfolioStore();
+  const {
+    showHeaderLogo,
+    setScrollToContact,
+    setScrollToGalleri,
+    setScrollToOmEllen,
+    setScrollToCv,
+    setShowMore,
+  } = usePortfolioStore();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -31,16 +38,28 @@ export const Header = () => {
         case "galleri":
           setScrollToGalleri(true);
           break;
+        case "cv":
+          setScrollToCv(true);
+          break;
         default:
           return;
       }
       navigate("/");
     } else {
-      setIsOpen(false)
-      const targetElement = document.getElementById(section);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+      if (section === "cv") {
+        setShowMore(true);
       }
+      setTimeout(() => {
+        const targetElement = document.getElementById(section);
+        if (targetElement) {
+          const yOffset = -100; // Offset for fixed headers or spacing
+          const y =
+            targetElement.getBoundingClientRect().top + window.scrollY + yOffset;
+  
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 100);
     }
   };
 
@@ -85,7 +104,8 @@ export const Header = () => {
             onClick={() => {
               if (window.location.pathname === "/") {
                 window.scrollTo({ top: 0, behavior: "smooth" });
-              }}}
+              }
+            }}
             className="animate-fadeIn h-8 tablet:h-10 object-cover hover:scale-110 transform transition-transform duration-300 origin-center"
           />
         )}
@@ -127,18 +147,30 @@ export const Header = () => {
           className={`absolute laptop:top-4 laptop:right-12 top-0 z-40 right-0 w-full h-screen laptop:w-fit laptop:h-fit text-xl text-red  bg-warm-white/90 laptop:bg-warm-white/0 flex justify-center `}
         >
           <ul className="flex flex-col laptop:flex-row items-center align-middle laptop:items-end gap-6 laptop:gap-10 laptop:pb-4 laptop:px-6 font-light mt-48 laptop:mt-0">
-          <li
-            onClick={() => handleNavClick("galleri")}
-              className={`hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center cursor-pointer`}
-            >Galleri</li>
             <li
-            onClick={() => handleNavClick("omEllen")}
+              onClick={() => handleNavClick("galleri")}
               className={`hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center cursor-pointer`}
-            >Om Ellen</li>
+            >
+              Galleri
+            </li>
             <li
-            onClick={() => handleNavClick("contact")}
+              onClick={() => handleNavClick("omEllen")}
               className={`hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center cursor-pointer`}
-            >Kontakt</li>
+            >
+              Om Ellen
+            </li>
+            <li
+              onClick={() => handleNavClick("cv")}
+              className={`hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center cursor-pointer`}
+            >
+              CV
+            </li>
+            <li
+              onClick={() => handleNavClick("contact")}
+              className={`hover:scale-110 hover:text-dark-brown transform transition-transform duration-300 origin-center cursor-pointer`}
+            >
+              Kontakt
+            </li>
           </ul>
         </div>
       )}

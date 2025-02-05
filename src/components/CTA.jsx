@@ -9,7 +9,7 @@ export const CTA = () => {
           aria-label="Email me at ellen_lindstrom@hotmail.com"
           className="flex gap-2 items-center font-light"
         >
-          Kontakta mig <MdMailOutline className="w-4 h-5 w-6 laptop:h-6" />
+          Kontakta Ellen <MdMailOutline className="w-4 h-5 w-6 laptop:h-6" />
         </a>
       </div>
     </>
