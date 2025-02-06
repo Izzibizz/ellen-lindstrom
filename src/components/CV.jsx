@@ -4,7 +4,7 @@ export const CV = () => {
 
     console.log(cv)
   return (
-    <div className="flex flex-col gap-4 text-stone-700 py-10 laptop:py-0">
+    <div className="flex flex-col gap-4 text-stone-700 py-10 laptop:py-16">
       <h3 className="text-3xl text-red self-center">CV</h3>
       <div className="flex flex-col gap-4">
       <div className="flex flex-col border border-red rounded-xl p-6 laptop:p-16 gap-4">

@@ -26,6 +26,7 @@ export const Header = () => {
     setIsOpen(false);
   };
 
+  //Scroll to sections instead of having routes
   const handleNavClick = (section) => {
     if (location.pathname !== "/") {
       switch (section) {
@@ -53,7 +54,7 @@ export const Header = () => {
       setTimeout(() => {
         const targetElement = document.getElementById(section);
         if (targetElement) {
-          const yOffset = -100; // Offset for fixed headers or spacing
+          const yOffset = -20;
           const y =
             targetElement.getBoundingClientRect().top + window.scrollY + yOffset;
   
