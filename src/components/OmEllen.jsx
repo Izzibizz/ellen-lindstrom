@@ -3,6 +3,7 @@ import { usePortfolioStore } from "../stores/usePortfolioStore";
 import { SlArrowUp } from "react-icons/sl";
 import { SlArrowDown } from "react-icons/sl";
 import { CV } from "../components/CV"
+import omEllen from "/Om-ellen.svg"
 
 export const OmEllen = () => {
 
@@ -40,12 +41,12 @@ export const OmEllen = () => {
           alt="Ellen Lindström porträtt"
           className="w-full laptop:w-1/2 rounded-xl object-cover"
         />
-        <div className="flex flex-col gap-2 self-end">
-          <h4 className="text-2xl text-red">Om Ellen</h4>
+        <div className="flex flex-col gap-4 self-end">
+          <img src={omEllen} alt="text sektion om Ellen" className="w-[160px]"/>
           <p className="text-justify">
-            Ellen är verksam som musikal&shy;artist, dansare, sång&shy;erska och
-            skåde&shy;spelerska sedan hon gick ut Balett&shy;akademien i
-            Stockholm år 2003. Helt nyut&shy;examinerad klev hon då rakt ut på
+            Ellen är musikal&shy;artist, dansare, sång&shy;erska och
+            skåde&shy;spelerska utbildad vid Balett&shy;akademien i
+            Stockholm, examen 2003. Helt nyut&shy;examinerad klev hon då rakt ut på
             samma scen som en av sina idoler – Petra Nielsen, i en av det årets
             stora musikal&shy;satsningar – Stars.
           </p>

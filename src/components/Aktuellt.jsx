@@ -1,8 +1,10 @@
+import aktuellt from "/aktuellt.svg"
+
 export const Aktuellt = () => {
   return (
     <section className="flex flex-col w-full bg-gradient-to-t from-red-600/100 to-red-400/80 pt-16 pb-24 gap-10 items-center laptop:items-start text-warm-white">
       <div className="flex flex-col w-10/12 mx-auto laptop:w-8/12 gap-10 ">
-        <h3 className=" text-2xl self-start">Aktuellt</h3>
+        <img src={aktuellt} alt="text sektion aktuellt" className="w-[180px]"/>
         <div className="flex flex-col laptop:flex-row gap-16 laptop:gap-18">
           <div className="flex flex-col gap-6 laptop:w-1/2 laptop:flex-row">
             <a href="https://evarydberg.se/" target="_blank" className="w-full">

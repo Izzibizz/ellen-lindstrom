@@ -1,5 +1,6 @@
 import { useState } from "react";
 import images from "../data/ImageData.json";
+import galleri from "/galleri.svg"
 import { ImageModal } from "./ImageModal";
 import { SlArrowUp } from "react-icons/sl";
 import { SlArrowDown } from "react-icons/sl";
@@ -29,7 +30,7 @@ export const Galleri = () => {
 
   return (
     <section className="w-10/12 laptop:w-8/12 mx-auto py-20 flex flex-col gap-10">
-      <h3 className=" text-2xl self-start text-red">Tidigare projekt</h3>
+      <img src={galleri} alt="text sektion galleri" className="w-[120px]"/>
       <div className="flex flex-col laptop:flex-row gap-4 border-b-4 border-red-400 pb-10">
         <iframe
           className="w-full h-full aspect-[6/4] rounded-xl"
