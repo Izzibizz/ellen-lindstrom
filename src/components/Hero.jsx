@@ -30,7 +30,7 @@ export const Hero = () => {
         alt="Ellen Lindstrom musikal artist"
         className={` z-0  absolute w-screen max-w-full top-0 left-0 h-[80vh] max-h-screen object-cover animate-zoomInOut`}
       />
-      <div className="absolute z-30 top-20 left-6 tablet:top-[2%] tablet:left-[10%]">
+      <div className="absolute z-30 top-20 left-6 tablet:top-10 tablet:left-[10%] laptop:top-18">
         <img
           src={logo}
           alt="logo Ellen Lindstrom name"
