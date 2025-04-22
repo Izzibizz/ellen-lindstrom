@@ -2,7 +2,7 @@ import aktuellt from "/aktuellt-vit.svg";
 
 export const Aktuellt = () => {
   return (
-    <section className="flex flex-col w-full bg-gradient-to-t from-red-400/100 to-red-600/80 pt-16 pb-24 gap-10 items-center laptop:items-start text-warm-white">
+    <section className="flex flex-col w-full bg-gradient-to-t from-red-400/100 to-red-600/80 pt-16 laptop:py-26 pb-24 gap-10 items-center laptop:items-start text-warm-white">
       <div className="flex flex-col w-10/12 mx-auto laptop:w-8/12 gap-10 ">
         <img
           src={aktuellt}
