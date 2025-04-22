@@ -59,7 +59,7 @@ export const SwiperComp = () => {
         {galleri.map((img, index) => (
           <SwiperSlide key={index} className="relative group cursor-pointer">
             <img
-              src={img.image}
+              src={img.thumbnail}
               alt={img.alt}
               className="object-cover aspect-[4/3]"
             />
