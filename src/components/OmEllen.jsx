@@ -93,7 +93,7 @@ export const OmEllen = () => {
             <img
               src="https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327990/Ellen-Lindstrom-musikalartist_xb1nex.jpg"
               alt="Ellen Lindström porträtt - musikalartist"
-              className="laptop:w-5/12 object-cover  rounded-xl  drop-shadow-xl"
+              className="laptop:w-5/12 laptop:h-[600px] object-cover  rounded-xl  drop-shadow-xl"
             />{" "}
           </div>
           <div ref={cvRef} id="cv">
