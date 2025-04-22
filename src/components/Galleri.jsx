@@ -16,7 +16,7 @@ export const Galleri = () => {
   const [sortedImages, setSortedImages] = useState(images);
   const [isAscending, setIsAscending] = useState(false);
   const [sortBy, setSortBy] = useState("year");
-  const displayedImages = showAll ? sortedImages : sortedImages.slice(0, 8);
+
 
   const handleOpenModal = (src, alt, photographer, year, title) => {
     setIsModalOpen(true);
@@ -77,7 +77,7 @@ export const Galleri = () => {
   return (
     <section className="w-10/12 laptop:w-8/12 mx-auto py-20 flex flex-col gap-10">
       <img src={galleri} alt="text sektion galleri" className="w-[120px]" />
-      <div className="flex flex-col laptop:flex-row gap-4 pb-12">
+      <div className="flex flex-col laptop:grid grid-cols-3 gap-4 pb-12">
         <iframe
           className="w-full h-full aspect-[6/4] rounded-xl"
           src="https://www.youtube.com/embed/cpW20gV0zHk?si=HWfjDR3WoA1UaC1P"
@@ -101,7 +101,7 @@ export const Galleri = () => {
         ></iframe>
       </div>
       <div className="flex flex-col gap-4">
-      <div className="flex gap-2 justify-end bg-gradient-to-t from-red-600/100 to-red-400/80 p-4">
+      <div className="flex gap-2 justify-end bg-gradient-to-t from-red-600/100 to-red-400/80 p-4 rounded-t-xl">
         <button
           onClick={() => handleSort("year")}
           className="flex gap-2 items-center text-sm border border-warm-white text-warm-white rounded-xl p-2 px-3 cursor-pointer hover:scale-105"
@@ -137,29 +137,60 @@ export const Galleri = () => {
           )}
         </button>
       </div>
-      <ul className="grid grid-cols-2 gap-4 tablet:grid-cols-4 laptop:gap-6 text-stone-700 font-light text-xs">
-        {displayedImages.map((img, index) => (
-          <li key={index}>
-            <img
-              src={img.image}
-              alt={img.alt}
-              className="aspect-[4/3] object-cover cursor-pointer"
-              onClick={() =>
-                handleOpenModal(
-                  img.image,
-                  img.alt,
-                  img.photographer,
-                  img.year,
-                  img.titel
-                )
-              }
-            />
-            <p>{img.titel}</p>
-            {img.year && <p>({img.year})</p>}
-            {img.photographer && <p>fotograf: {img.photographer}</p>}
-          </li>
-        ))}
-      </ul>
+      <ul className="grid grid-cols-2 gap-4 tablet:grid-cols-4 laptop:gap-6 text-stone-700 font-light text-xs transition-all duration-700 ease-in-out ">
+      {sortedImages.slice(0, 8).map((img, index) => (
+      <li key={index}>
+        <img
+          src={img.image}
+          alt={img.alt}
+          className="aspect-[4/3] object-cover cursor-pointer"
+          onClick={() =>
+            handleOpenModal(
+              img.image,
+              img.alt,
+              img.photographer,
+              img.year,
+              img.titel
+            )
+          }
+        />
+        <p>{img.titel}</p>
+        {img.year && <p>({img.year})</p>}
+        {img.photographer && <p>fotograf: {img.photographer}</p>}
+      </li>
+    ))}
+  </ul>
+
+  {/* Expandable section */}
+  <div
+    className={`transition-all duration-700 overflow-hidden ${
+      showAll ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
+    }`}
+  >
+    <ul className="grid grid-cols-2 gap-4 tablet:grid-cols-4 laptop:gap-6 text-stone-700 font-light text-xs mt-4">
+      {sortedImages.slice(8).map((img, index) => (
+        <li key={index}>
+          <img
+            src={img.image}
+            alt={img.alt}
+            className="aspect-[4/3] object-cover cursor-pointer"
+            onClick={() =>
+              handleOpenModal(
+                img.image,
+                img.alt,
+                img.photographer,
+                img.year,
+                img.titel
+              )
+            }
+          />
+          <p>{img.titel}</p>
+          {img.year && <p>({img.year})</p>}
+          {img.photographer && <p>fotograf: {img.photographer}</p>}
+        </li>
+      ))}
+    </ul>
+  </div>
       </div>
       <button
         className="flex gap-2 items-center bg-gradient-to-t from-red-600/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-xs laptop:text-sm hover:scale-105 self-center tablet:self-end"
@@ -167,11 +198,11 @@ export const Galleri = () => {
       >
         {showAll ? (
           <>
-            Visa färre <SlArrowUp />
+            Visa färre bilder <SlArrowUp />
           </>
         ) : (
           <>
-            Visa fler <SlArrowDown />
+            Visa fler bilder <SlArrowDown />
           </>
         )}
       </button>

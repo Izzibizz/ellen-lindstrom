@@ -37,7 +37,7 @@ export const OmEllen = () => {
     <section className="w-10/12 laptop:w-8/12 mx-auto flex flex-col py-20 text-stone-700 gap-6 laptop:gap-16">
       <div className="flex flex-col laptop:flex-row gap-8 laptop:gap-16" ref={topRef}> 
         <img
-          src="https://res.cloudinary.com/dbf8xygxz/image/upload/v1738180385/Ellen-Lindstrom-musikalartist_kmv6ge.jpg"
+          src="https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327991/Ellen-Lindstrom-musikalartist_jvq1qc.jpg"
           alt="Ellen Lindström porträtt"
           className="w-full laptop:w-1/2 rounded-xl object-cover"
         />
@@ -74,7 +74,7 @@ export const OmEllen = () => {
       {showMore && (
         <div className="flex flex-col gap-12 animate-fadeIn"> 
           <div className="flex flex-col laptop:flex-row justify-between gap-6">
-            <div className="flex flex-col gap-4 laptop:w-1/2"> <p
+            <div className="flex flex-col gap-4 laptop:w-1/2 laptop:justify-end"> <p
             className={` laptop:hidden text-justify
             }`}
           >
@@ -90,9 +90,9 @@ export const OmEllen = () => {
             <p className="text-justify">Sommaren 2025 står Ellen återigen på Eva Rydbergs nystartade scen Sundspärlan i Helsingborg, i farsen Spanska flugan. Och hösten 2025 ser vi henne i kult&shy;musikalen Rocky Horror Show som spelas på Nöjesteatern, Malmö.</p>
             </div>
             <img
-              src="https://res.cloudinary.com/dbf8xygxz/image/upload/v1738657715/Ellen-Lindstrom-musikalartist_uzqc2k.jpg"
+              src="https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327990/Ellen-Lindstrom-musikalartist_xb1nex.jpg"
               alt="Ellen Lindström porträtt - musikalartist"
-              className="laptop:w-1/3 object-cover  rounded-xl"
+              className="laptop:w-5/12 object-cover  rounded-xl"
             />{" "}
           </div>
           <div ref={cvRef} id="cv">

@@ -7,7 +7,7 @@ export const CV = () => {
     <div className="flex flex-col gap-4 text-stone-700 py-10 laptop:py-16">
       <h3 className="text-3xl text-red self-center">CV</h3>
       <div className="flex flex-col gap-4">
-      <div className="flex flex-col border border-red rounded-xl p-6 laptop:p-16 gap-4">
+      <div className="flex flex-col border border-red rounded-xl p-6 laptop:p-16 gap-4 laptop:max-w-[900px] laptop:mx-auto">
       <h4 className="text-red font-semibold">ERFARENHET I URVAL, SCEN</h4>
       <ul className="flex flex-col  gap-y-4 ">
         {cv[0].theater.map((production, index) => (
@@ -26,7 +26,7 @@ export const CV = () => {
         ))}
          </ul>
         </div>
-        <div className="flex flex-col laptop:flex-row laptop:gap-20 laptop:w-full gap-10 border border-red rounded-xl p-6">
+        <div className="flex flex-col laptop:flex-row laptop:gap-20 laptop:w-full gap-10 border border-red rounded-xl p-6 laptop:max-w-[900px] laptop:mx-auto">
         <ul className="flex flex-col gap-4">
         <h4 className="text-red font-semibold">UTBILDNING</h4>
         {cv[0].education.map((school, index) => (
@@ -37,7 +37,7 @@ export const CV = () => {
         ))}
        
         </ul>
-        <ul className="flex flex-col laptop:grid laptop:grid-cols-2 gap-2">
+        <ul className="flex flex-col gap-2">
         <h4 className="text-red font-semibold">TV & FILM</h4>
         {cv[0].tv_film.map((production, index) => (
             <li key={index}>

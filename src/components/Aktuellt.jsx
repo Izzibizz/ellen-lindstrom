@@ -9,9 +9,9 @@ export const Aktuellt = () => {
           <div className="flex flex-col gap-6 laptop:w-1/2 laptop:flex-row">
             <a href="https://evarydberg.se/" target="_blank" className="w-full">
               <img
-                src="https://res.cloudinary.com/dbf8xygxz/image/upload/v1738661505/Spanska-flugan-Ellen-Lindstrom-2025-sq_c4nqap.jpg"
+                src="https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327740/Spanska-flugan-Ellen-Lindstrom-2025_znmqbz.jpg"
                 alt="aktuellt spanska flugan "
-                className="w-full object-cover"
+                className="w-full object-cover laptop:aspect-square laptop:object-top"
               />
             </a>
             <div className=" flex flex-col gap-4 laptop:w-2/3">
@@ -37,7 +37,7 @@ export const Aktuellt = () => {
               className="w-full"
             >
               <img
-                src="https://res.cloudinary.com/dbf8xygxz/image/upload/v1738180388/kommande-Ellen-Lindstrom-Rocky-Horrows-Show-2025_b4k9u9.jpg"
+                src="https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327745/kommande-Ellen-Lindstrom-Rocky-Horrows-Show-2025_doqhvg.jpg"
                 alt="aktuellt Rocky Horrors Show "
                 className="w-full object-cover"
               />

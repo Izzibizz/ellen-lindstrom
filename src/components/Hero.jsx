@@ -24,8 +24,8 @@ export const Hero = () => {
       <img
         src={
           isLaptop
-            ? "https://res.cloudinary.com/dbf8xygxz/image/upload/v1738571340/ellen-lindstrom-musikalartist-2_qlgwlw.jpg"
-            : "https://res.cloudinary.com/dbf8xygxz/image/upload/v1738572915/ellen-lindstrom-musikalartist-1_ihdh3j.jpg"
+            ? "https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327536/ellen-lindstrom-musikalartist-2_tjnsw7.jpg"
+            : "https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327536/ellen-lindstrom-musikalartist-1_jgz7cs.jpg"
         }
         alt="Ellen Lindstrom musikal artist"
         className={` z-0  absolute w-screen max-w-full top-0 left-0 h-[80vh] max-h-screen object-cover animate-zoomInOut`}
