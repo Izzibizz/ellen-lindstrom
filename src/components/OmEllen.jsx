@@ -34,15 +34,16 @@ export const OmEllen = () => {
   }, [])
 
   return (
-    <section className="w-10/12 laptop:w-8/12 mx-auto flex flex-col py-20 text-stone-700 gap-6 laptop:gap-16">
+    <section className="w-10/12 laptop:w-8/12 mx-auto flex flex-col py-28 tablet:py-36 text-stone-700 gap-6 laptop:gap-16">
       <div className="flex flex-col laptop:flex-row gap-8 laptop:gap-16" ref={topRef}> 
+      <img src={omEllen} alt="text sektion om Ellen" className="w-[180px] laptop:hidden"/>
         <img
           src="https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327991/Ellen-Lindstrom-musikalartist_jvq1qc.jpg"
           alt="Ellen Lindström porträtt"
-          className="w-full laptop:w-1/2 rounded-xl object-cover"
+          className="w-full laptop:w-1/2 rounded-xl object-cover  drop-shadow-xl"
         />
         <div className="flex flex-col gap-4 self-end">
-          <img src={omEllen} alt="text sektion om Ellen" className="w-[160px]"/>
+          <img src={omEllen} alt="text sektion om Ellen" className="w-[160px] hidden laptop:flex"/>
           <p className="text-justify">
             Ellen är musikal&shy;artist, dansare, sång&shy;erska och
             skåde&shy;spelerska utbildad vid Balett&shy;akademien i
@@ -63,7 +64,7 @@ export const OmEllen = () => {
           </p>
           {!showMore && (
             <button
-              className="flex gap-2 items-center bg-gradient-to-t from-red-600/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-sm hover:scale-105 mt-4"
+              className="flex self-end gap-2 items-center bg-gradient-to-t from-red-600/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-sm hover:scale-105 mt-4"
               onClick={() => setShowMore(!showMore)}
             >
               Läs mer <SlArrowDown />
@@ -92,7 +93,7 @@ export const OmEllen = () => {
             <img
               src="https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327990/Ellen-Lindstrom-musikalartist_xb1nex.jpg"
               alt="Ellen Lindström porträtt - musikalartist"
-              className="laptop:w-5/12 object-cover  rounded-xl"
+              className="laptop:w-5/12 object-cover  rounded-xl  drop-shadow-xl"
             />{" "}
           </div>
           <div ref={cvRef} id="cv">

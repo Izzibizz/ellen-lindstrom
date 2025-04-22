@@ -1,21 +1,25 @@
-import aktuellt from "/aktuellt.svg"
+import aktuellt from "/aktuellt-vit.svg";
 
 export const Aktuellt = () => {
   return (
-    <section className="flex flex-col w-full bg-gradient-to-t from-red-600/100 to-red-400/80 pt-16 pb-24 gap-10 items-center laptop:items-start text-warm-white">
+    <section className="flex flex-col w-full bg-gradient-to-t from-red-400/100 to-red-600/80 pt-16 pb-24 gap-10 items-center laptop:items-start text-warm-white">
       <div className="flex flex-col w-10/12 mx-auto laptop:w-8/12 gap-10 ">
-        <img src={aktuellt} alt="text sektion aktuellt" className="w-[180px]"/>
+        <img
+          src={aktuellt}
+          alt="text sektion aktuellt"
+          className="w-[180px] tablet:w-[200px] self-center tablet:self-start"
+        />
         <div className="flex flex-col laptop:flex-row gap-16 laptop:gap-18">
           <div className="flex flex-col gap-6 laptop:w-1/2 laptop:flex-row">
             <a href="https://evarydberg.se/" target="_blank" className="w-full">
               <img
                 src="https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327740/Spanska-flugan-Ellen-Lindstrom-2025_znmqbz.jpg"
                 alt="aktuellt spanska flugan "
-                className="w-full object-cover laptop:aspect-square laptop:object-top"
+                className="w-full object-cover laptop:aspect-square laptop:object-top drop-shadow-xl"
               />
             </a>
             <div className=" flex flex-col gap-4 laptop:w-2/3">
-              <h4 className="text-lg font-semibold">Spanska Flugan</h4>
+              <h4 className="text-xl font-round">Spanska Flugan</h4>
               <p className="text-justify text-sm">
                 {" "}
                 Spanska Flugan räknas som en av världens bästa komedier. Skriven
@@ -39,11 +43,11 @@ export const Aktuellt = () => {
               <img
                 src="https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327745/kommande-Ellen-Lindstrom-Rocky-Horrows-Show-2025_doqhvg.jpg"
                 alt="aktuellt Rocky Horrors Show "
-                className="w-full object-cover"
+                className="w-full object-cover  drop-shadow-xl"
               />
             </a>
             <div className=" flex flex-col gap-4 laptop:w-2/3">
-              <h4 className="text-lg font-semibold">Rocky Horror Show</h4>
+              <h4 className="text-xl font-round">Rocky Horror Show</h4>
               <p className="text-justify text-sm">
                 {" "}
                 Från sin legendariska premiär 1973 har The Rocky Horror Show

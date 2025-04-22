@@ -26,7 +26,7 @@ export const CV = () => {
         ))}
          </ul>
         </div>
-        <div className="flex flex-col laptop:flex-row laptop:gap-20 laptop:w-full gap-10 border border-red rounded-xl p-6 laptop:max-w-[900px] laptop:mx-auto">
+        <div className="flex flex-col laptop:flex-row laptop:gap-20 laptop:w-full gap-10 border border-red rounded-xl p-6 laptop:max-w-[900px] laptop:mx-auto ">
         <ul className="flex flex-col gap-4">
         <h4 className="text-red font-semibold">UTBILDNING</h4>
         {cv[0].education.map((school, index) => (

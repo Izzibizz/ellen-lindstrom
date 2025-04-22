@@ -3,7 +3,7 @@
 
 
 @theme {
-  --font-round: "Montserrat Alternates", "serif";
+  --font-round: "Karla", "sans-serif";
   --font-body: "Figtree", "serif";
 
   --breakpoint-tablet: 600px;
