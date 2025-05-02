@@ -101,7 +101,7 @@ export const Galleri = () => {
         ></iframe>
       </div>
       <div className="flex flex-col gap-4">
-      <div className="flex gap-2 justify-end bg-gradient-to-t from-red-600/100 to-red-400/80 p-4 rounded-t-xl">
+      <div className="flex gap-2 justify-end bg-gradient-to-t  from-rose-800/100 to-red-600/80 p-4 rounded-t-xl">
         <button
           onClick={() => handleSort("year")}
           className="flex gap-2 items-center text-sm border border-warm-white text-warm-white rounded-xl p-2 px-3 cursor-pointer hover:scale-105"
@@ -193,7 +193,7 @@ export const Galleri = () => {
   </div>
       </div>
       <button
-        className="flex gap-2 items-center bg-gradient-to-t from-red-600/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-xs laptop:text-sm hover:scale-105 self-center tablet:self-end"
+        className="flex gap-2 items-center bg-gradient-to-t  from-rose-800/100 to-red-600/80 cursor-pointer  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-xs laptop:text-sm hover:scale-105 self-center tablet:self-end"
         onClick={() => setShowAll(!showAll)}
       >
         {showAll ? (

@@ -64,7 +64,7 @@ export const OmEllen = () => {
           </p>
           {!showMore && (
             <button
-              className="flex self-end gap-2 items-center bg-gradient-to-t from-red-600/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-sm hover:scale-105 mt-4"
+              className="flex self-end gap-2 items-center bg-gradient-to-t from-rose-800/100 to-red-600/80 cursor-pointer hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-sm hover:scale-105 mt-4"
               onClick={() => setShowMore(!showMore)}
             >
               Läs mer <SlArrowDown />
@@ -100,7 +100,7 @@ export const OmEllen = () => {
           <CV />
           </div>
           <button
-            className="flex gap-2 items-center bg-gradient-to-t from-red-600/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-sm hover:scale-105 self-center mt-4"
+            className="flex gap-2 items-center bg-gradient-to-t  from-rose-800/100 to-red-600/80 cursor-pointer w-fit rounded-2xl p-2 px-3 text-warm-white text-sm hover:scale-105 self-center mt-4"
             onClick={() => handleClick()}
           >
             Läs mindre <SlArrowUp />

@@ -4,7 +4,7 @@ import kontakta from "/kontakta.svg"
 
 export const Contact = () => {
   return (
-    <section className="w-full bg-gradient-to-t from-red-600/100 to-red-400/80 p-6 py-40 text-warm-white font-round">
+    <section className="w-full bg-gradient-to-t from-rose-800/100 to-red-600/80 p-6 py-40 text-warm-white font-round">
         <div className="w-fit mx-auto flex flex-col gap-8 ">
      <img src={kontakta} alt="sektion för att kontakta Ellen" className="w-[350px]"/>
      <div className="w-fit mx-auto flex flex-col gap-3">
