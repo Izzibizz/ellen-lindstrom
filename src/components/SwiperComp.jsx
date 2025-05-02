@@ -61,7 +61,7 @@ export const SwiperComp = () => {
             <img
               src={img.thumbnail}
               alt={img.alt}
-              className="object-cover aspect-[4/3]"
+              className="object-cover aspect-[4/3] "
             />
             <div className="absolute inset-0 bg-black bg-opacity-0 flex items-center justify-center opacity-0 group-hover:opacity-80 transition-opacity duration-300"
             onClick={() => handleOpenModal(img.image, img.alt, img.photographer, img.year, img.titel)}>

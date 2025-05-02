@@ -38,7 +38,7 @@ export const OmEllen = () => {
       <div className="flex flex-col laptop:flex-row gap-8 laptop:gap-16" ref={topRef}> 
       <img src={omEllen} alt="text sektion om Ellen" className="w-[180px] laptop:hidden"/>
         <img
-          src="https://res.cloudinary.com/dbu0kqoee/image/upload/v1745327991/Ellen-Lindstrom-musikalartist_jvq1qc.jpg"
+          src="https://res.cloudinary.com/dbu0kqoee/image/upload/v1746179179/Ellen-Lindstrom-musikalartist-portr%C3%A4tt_vsoqra.webp"
           alt="Ellen Lindström porträtt"
           className="w-full laptop:w-1/2 rounded-xl object-cover  drop-shadow-xl"
         />

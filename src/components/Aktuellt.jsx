@@ -2,7 +2,7 @@ import aktuellt from "/aktuellt-vit.svg";
 
 export const Aktuellt = () => {
   return (
-    <section className="flex flex-col w-full bg-gradient-to-t from-rose-600/100 to-red-800/80 pt-16 laptop:py-26 pb-24 gap-10 items-center laptop:items-start text-warm-white">
+    <section className="flex flex-col w-full bg-gradient-to-t from-rose-600/100 to-red-600/80 pt-16 laptop:py-26 pb-24 gap-10 items-center laptop:items-start text-warm-white">
       <div className="flex flex-col w-10/12 mx-auto laptop:w-8/12 gap-10 ">
         <img
           src={aktuellt}
@@ -28,7 +28,7 @@ export const Aktuellt = () => {
               </p>
               <p>Premiär: 13 juni 2025</p>
               <a href="https://evarydberg.se/" target="_blank">
-                <button className="cursor-pointer bg-gradient-to-t from-red-700/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-xs hover:scale-105 self-center tablet:self-start">
+                <button className="cursor-pointer bg-warm-white hover:bg-rose-600/100 hover:border hover:border-warm-white hover:text-warm-white w-fit rounded-2xl p-2 px-3 text-red-800 text-xs hover:scale-105 self-center tablet:self-start">
                   Köp biljetter
                 </button>
               </a>
@@ -56,7 +56,7 @@ export const Aktuellt = () => {
               </p>
               <p>Premiär: 16 oktober 2025</p>
               <a href="https://rockyhorror.se/" target="_blank">
-                <button className="cursor-pointer bg-gradient-to-t from-red-700/80 to-red-300/80  hover:bg-red/100 w-fit rounded-2xl p-2 px-3 text-warm-white text-xs hover:scale-105 self-center tablet:self-start">
+                <button className="cursor-pointer bg-warm-white hover:bg-rose-600/100 hover:border hover:border-warm-white hover:text-warm-white w-fit rounded-2xl p-2 px-3 text-red-800 text-xs hover:scale-105 self-center tablet:self-start">
                   Köp biljetter
                 </button>
               </a>
