@@ -1,5 +1,19 @@
 [{
     "theater": [
+       {
+        "title": "Spanska Flugan",
+        "year": "2025",
+        "role": "Matilda Minör",
+        "location": "Sundspärlan",
+        "director": "Anders Aldgård"
+      },
+       {
+        "title": "Rocky Horror Show",
+        "year": "2025",
+        "role": "Lead Female Phantom, US Columbia & Magenta, Koreografassistent",
+        "location": "NöjesTeatern Malmö",
+        "director": "Siân Playsted"
+      },
       {
         "title": "Ett resande teatersällskap",
         "year": "2024",

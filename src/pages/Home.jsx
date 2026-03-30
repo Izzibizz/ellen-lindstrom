@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 import { usePortfolioStore } from "../stores/usePortfolioStore";
 import { Loading } from "../components/Loading";
 import { Hero } from "../components/Hero";
@@ -88,9 +89,16 @@ export const Home = () => {
   }, [setShowHeaderLogo]);
 
   return (
-    <section className="animate-longFadeIn min-h-screen w-screen max-w-screen relative flex flex-col font-body gap-6 laptop:gap-12">
-      {loading ? (
-        <Loading />
+    <>
+      <Helmet>
+        <title>Ellen Lindström Portfolio</title>
+        <meta name="description" content="Ellen Lindström designer portfolio with bio, gallery, and contact information." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+      </Helmet>
+      <section className="animate-longFadeIn min-h-screen w-screen max-w-screen relative flex flex-col font-body gap-6 laptop:gap-12">
+        {loading ? (
+          <Loading />
       ) : (
         <>
           <div ref={heroRef}>
@@ -111,5 +119,6 @@ export const Home = () => {
         </>
       )}
     </section>
+    </>
   );
 };
